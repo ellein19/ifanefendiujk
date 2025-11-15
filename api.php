@@ -233,8 +233,9 @@ try {
             }
 
             $description = trim((string)($payload['description'] ?? '')) ?: null;
-            $dueDate = $payload['dueDate'] ?? null;
-            if ($dueDate && !preg_match('/^\d{4}-\d{2}-\d{2}$/', (string)$dueDate)) {
+            $dueDate = trim((string)($payload['dueDate'] ?? ''));
+            $dueDate = $dueDate !== '' ? $dueDate : null;
+            if ($dueDate !== null && !preg_match('/^\d{4}-\d{2}-\d{2}$/', $dueDate)) {
                 respond(false, 'Format tanggal tidak valid (YYYY-MM-DD)', null, 422);
             }
 
@@ -279,8 +280,9 @@ try {
                 respond(false, 'Judul wajib diisi', null, 422);
             }
             $description = trim((string)($payload['description'] ?? '')) ?: null;
-            $dueDate = $payload['dueDate'] ?? null;
-            if ($dueDate && !preg_match('/^\d{4}-\d{2}-\d{2}$/', (string)$dueDate)) {
+            $dueDate = trim((string)($payload['dueDate'] ?? ''));
+            $dueDate = $dueDate !== '' ? $dueDate : null;
+            if ($dueDate !== null && !preg_match('/^\d{4}-\d{2}-\d{2}$/', $dueDate)) {
                 respond(false, 'Format tanggal tidak valid', null, 422);
             }
 
