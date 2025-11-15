@@ -84,11 +84,5 @@ Kedua berkas sudah diuji dengan linter bawaan PHP (`php -l`).
 └── README.md            # Dokumentasi dan panduan
 ```
 
-## 🛠️ Pengembangan Lanjut
-
-- Migrasi penyimpanan ke database (MySQL/PostgreSQL) bila data makin besar.
-- Tambahkan autentikasi sederhana untuk multi pengguna.
-- Gunakan WebSocket atau SSE untuk kolaborasi real-time.
-- Tambahkan pengujian otomatis (PHPUnit) untuk endpoint API.
-
-Selamat membangun produktivitas Anda dengan PHP native! ☀️
+## Kontributor
+- IFAN EFENDI (https://github.com/ellein19)
